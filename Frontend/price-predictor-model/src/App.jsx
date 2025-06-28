@@ -116,8 +116,8 @@ function App() {
     });
 
     try {
-      const apiUrl = import.meta.env.VITE_API_URL;
-      const response = await fetch(`${apiUrl}/predict`, {
+      const url = 'https://usedcarpricepredictionmodel-production.up.railway.app/predict';
+      const response = await fetch(url, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
